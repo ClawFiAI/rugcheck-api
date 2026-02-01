@@ -1,0 +1,28 @@
+{
+  "name": "rugcheck-api",
+  "version": "1.0.0",
+  "description": "API service for detecting rug pulls and honeypots in crypto tokens",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts src/server.ts --format cjs --dts",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "keywords": ["rugpull", "honeypot", "crypto", "security", "defi", "api"],
+  "author": "ClawFi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClawFiAI/rugcheck-api.git"
+  },
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "@fastify/cors": "^8.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2"
+  }
+}
